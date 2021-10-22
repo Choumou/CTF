@@ -24,7 +24,8 @@ On utilise la commande grep et nous tombons sur des logs contenant la requête H
 ```TCP_MISS/200 813 GET http://frplab.com:37566/sdhjkzui1782109zkjeznds```
 
 Cette URL étant effectivement louche, on calcule le sha256 et l'étape n°1 est finie.
-**Flag** : 0cb9c24ae4d9d05096a9a837dcd0169e792369dcf48f7da456fda96638f47d18
+
+**FLAG** : 0cb9c24ae4d9d05096a9a837dcd0169e792369dcf48f7da456fda96638f47d18
 
 ### Étape n°2
 
@@ -40,7 +41,7 @@ Avec ça, nous avons un dossier rempli de fichiers .evtx, qui correspondent à d
 En cherchant le nom de domaine malicieux, à savoir frplab.com, dans le fichier, on tombe sur l'évènement suivant : [event.txt](event.txt).
 On peut voir le nom du job demandé pour valider l'épreuve.
 
-**Flag** : qsljdsyy19872IFDND172537438eueir
+**FLAG** : qsljdsyy19872IFDND172537438eueir
 
 ### Étape n°3
 >Step3:
@@ -63,7 +64,7 @@ Le fichier $MFT correspont à la Master File Table, présente dans le système d
 
 Ce fichier correspond aux logs des opérations faites sur des fichiers système de Windows. On trouve un outil appelé [USN-Journal-Parser](https://github.com/PoorBillionaire/USN-Journal-Parser) qui permet de lire ce fichier. On commence à chercher à partir de l'heure de la création du job dont parlait l'étape n°2, c'est-à-dire ```2021-08-18 09:38:34.875330```. On parcourt le fichier quelques temps puis on trouver un log décrivant un fichier au nom étrange : ```payload-aXRpc2Fsd2F5c3RoZXNhbWUK.001```. On remarque tout de suite le texte encodé en base64 que l'on s'empresse de décoder : ```itisalwaysthesame```. Ça ressemble fortement au début d'un flag. On trouve ensuite quatre autres fichiers de ce style, une fois décodés, nous obtenons la phrase suivante : ```itisalwaysthesame auserclickedonawrongfile wherecoulditbe thepa119737w@rdforthelaststepis alqjioue679AIEUSJ98```.
 
-**Flag** : alqjioue679AIEUSJ98
+**FLAG** : alqjioue679AIEUSJ98
 
 
 ### Étape n°4
@@ -81,5 +82,5 @@ NTUSER.dat est un fichier propre à chaque utilisateur et contient la configurat
 On se tourne alors vers NTUSER.dat, on trouve grâce à ```strings``` la mention d'un fichier nommé mon_compte_formation.lnk. Ce fichier ne vient évidemment pas de Windows donc il nous intéresse. 
 On utilise l'outil [Registry Explorer](https://ericzimmerman.github.io/#!index.md) qui nous permet d'avoir une arborescence des registres stockés dans NTUSER.dat. On recherche le nom ```mon_compte_formation```. On tombe sur six mentions de ce fichier et une de ces mentions contient une date au même format que celui demandé. On calcule le sha256 et on valide la quatrième épreuve.
 
-**Flag** : 02e7e0ee22695ab7f9299a1eef8a0227555004a70cafc87374612f82c42915e4
+**FLAG** : 02e7e0ee22695ab7f9299a1eef8a0227555004a70cafc87374612f82c42915e4
 
