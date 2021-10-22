@@ -24,6 +24,7 @@ On utilise la commande grep et nous tombons sur des logs contenant la requête H
 ```TCP_MISS/200 813 GET http://frplab.com:37566/sdhjkzui1782109zkjeznds```
 
 Cette URL étant effectivement louche, on calcule le sha256 et l'étape n°1 est finie.
+
 **FLAG** : 0cb9c24ae4d9d05096a9a837dcd0169e792369dcf48f7da456fda96638f47d18
 
 ### Étape n°2
