@@ -1,0 +1,53 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event%22%3E<System><Provider Name="Microsoft-Windows-Bits-Client" Guid="{ef1cc15b-46c1-414e-bb95-e76b077bd51e}"></Provider>
+<EventID Qualifiers="">59</EventID>
+<Version>1</Version>
+<Level>4</Level>
+<Task>0</Task>
+<Opcode>1</Opcode>
+<Keywords>0x40000000000000</Keywords>
+<TimeCreated SystemTime="2021-08-18 09:38:34.875330"></TimeCreated>
+<EventRecordID>68</EventRecordID>
+<Correlation ActivityID="{46704613-5f8b-4911-b908-f19d666e51e2}" RelatedActivityID=""></Correlation>
+<Execution ProcessID="432" ThreadID="5788"></Execution>
+<Channel>Microsoft-Windows-Bits-Client/Operational</Channel>
+<Computer>DESKTOP-HVT7JDU</Computer>
+<Security UserID="S-1-5-18"></Security>
+</System>
+<EventData><Data Name="transferId">{46704613-5f8b-4911-b908-f19d666e51e2}</Data>
+<Data Name="name">qsljdsyy19872IFDND172537438eueir</Data>
+<Data Name="Id">{e85da2b3-0ea1-413f-ae2c-294eca2190e3}</Data>
+<Data Name="url">http://frplab.com:37566/sdhjkzui1782109zkjeznds</Data>
+<Data Name="peer"></Data>
+<Data Name="fileTime">2021-08-17 14:36:04</Data>
+<Data Name="fileLength">456</Data>
+<Data Name="bytesTotal">456</Data>
+<Data Name="bytesTransferred">0</Data>
+<Data Name="bytesTransferredFromPeer">0</Data>
+</EventData>
+</Event><Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event%22%3E<System><Provider Name="Microsoft-Windows-Bits-Client" Guid="{ef1cc15b-46c1-414e-bb95-e76b077bd51e}"></Provider>
+<EventID Qualifiers="">59</EventID>
+<Version>1</Version>
+<Level>4</Level>
+<Task>0</Task>
+<Opcode>1</Opcode>
+<Keywords>0x40000000000000</Keywords>
+<TimeCreated SystemTime="2021-08-18 09:38:34.875330"></TimeCreated>
+<EventRecordID>68</EventRecordID>
+<Correlation ActivityID="{46704613-5f8b-4911-b908-f19d666e51e2}" RelatedActivityID=""></Correlation>
+<Execution ProcessID="432" ThreadID="5788"></Execution>
+<Channel>Microsoft-Windows-Bits-Client/Operational</Channel>
+<Computer>DESKTOP-HVT7JDU</Computer>
+<Security UserID="S-1-5-18"></Security>
+</System>
+<EventData><Data Name="transferId">{46704613-5f8b-4911-b908-f19d666e51e2}</Data>
+<Data Name="name">qsljdsyy19872IFDND172537438eueir</Data>
+<Data Name="Id">{e85da2b3-0ea1-413f-ae2c-294eca2190e3}</Data>
+<Data Name="url">http://frplab.com:37566/sdhjkzui1782109zkjeznds</Data>
+<Data Name="peer"></Data>
+<Data Name="fileTime">2021-08-17 14:36:04</Data>
+<Data Name="fileLength">456</Data>
+<Data Name="bytesTotal">456</Data>
+<Data Name="bytesTransferred">0</Data>
+<Data Name="bytesTransferredFromPeer">0</Data>
+</EventData>
+</Event>
