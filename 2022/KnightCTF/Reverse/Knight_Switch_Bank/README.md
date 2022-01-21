@@ -3,15 +3,15 @@
 
 _I have forgot my Knight Switch Bank password. Can you please retrive the password for me ?_
 
-The binary is a ELF 64-bit, not stripped. First, we want to know what does the binary, and for that we use Ghidra to decompile it. We look at main function's pseudocode and we can see few intersting things : 
+The binary is a ELF 64-bit, not stripped. First, we want to know what the binary does, and for that we use Ghidra to decompile it. We look at main function's pseudocode and we can see few intersting things : 
 
-First, out input is modified in this code :
+First, our input is modified in this code :
 
 ![](img/modified.png)
 
 The binary takes our input char by char and does the following operation :
 If the char is between 'A' and 'M' or between 'a' and 'm', the binary adds 0xd (13) to the char.
-Else if the char is between 'N' and 'Z' or between 'n' and 'z', the binary substracts 0xd (13) to the char.
+Else if the char is between 'N' and 'Z' or between 'n' and 'z', the binary substracts 0xd (13) off the char.
 Else, the binary substracts 0x20 (32) to the char.
 And finally, for all the chars modified before, the binary adds 0x2 to it.
 
@@ -21,7 +21,7 @@ After that, the binary compares each char with a set of chars from the binary it
 
 local_38 on the screenshot corresponds to the following string : "ZRIU]HdANdJAGDIAxIAvDDsAyDDq_"
 
-Now, we have all the informations to get the flag. In fact, the operations made in the first part are just a rot13 cipher. The letter will be substituted by the 13th letter after it. For example, a "A" will become a "N", and a "P" will become a "C". And when the char is not a letter, the binary just substracts 0x20 to it.
+Now, we have all the informations to get the flag. In fact, the operations made in the first part are just a rot13 cipher. The letter will be substituted by the 13th letter after it. For example, an "A" will become a "N", and a "P" will become a "C". And when the char is not a letter, the binary just substracts 0x20 off it.
 
 I wrote this little script to get the flag :
 
