@@ -1,3 +1,0 @@
-# CTF
-
-## Liste des CTF
